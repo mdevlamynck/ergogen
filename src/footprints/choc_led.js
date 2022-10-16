@@ -1,9 +1,9 @@
 module.exports = {
   nets: {
-    from: undefined,
-    to: undefined,
-    din: undefined,
-    dout: undefined,
+    key_in: undefined,
+    key_out: undefined,
+    led_in: undefined,
+    led_out: undefined,
     VCC: 'VCC',
     GND: 'GND'
   },
@@ -226,20 +226,20 @@ module.exports = {
         (pad "" np_thru_hole circle (at 0 0 ${p.rot + 270}) (size 3.4 3.4) (drill 3.4) (layers *.Cu *.Mask))
         (pad "" np_thru_hole circle (at 0 -5.9 ${p.rot + 270}) (size 3 3) (drill 3) (layers *.Cu *.Mask))
         (pad "" np_thru_hole circle (at 5 -3.7 ${p.rot + 270}) (size 3 3) (drill 3) (layers *.Cu *.Mask))
-        (pad 5 smd rect (at -2.8 -5.9 ${p.rot}) (size 1.6 2.2) (layers B.Cu B.Paste B.Mask) ${p.net.from.str})
-        (pad 6 smd rect (at 7.8 -3.7 ${p.rot}) (size 1.6 2.2) (layers B.Cu B.Paste B.Mask) (clearance 0.3) ${p.net.to.str})
-        (pad 6 smd rect (at -7.9 -3.7 ${p.rot}) (size 1.6 2.2) (layers F.Cu F.Paste F.Mask) (clearance 0.5) ${p.net.to.str})
-        (pad 5 smd rect (at 2.8 -5.9 ${p.rot}) (size 1.6 2.2) (layers F.Cu F.Paste F.Mask) ${p.net.from.str})
+        (pad 5 smd rect (at -2.8 -5.9 ${p.rot}) (size 1.6 2.2) (layers B.Cu B.Paste B.Mask) ${p.net.key_in.str})
+        (pad 6 smd rect (at 7.8 -3.7 ${p.rot}) (size 1.6 2.2) (layers B.Cu B.Paste B.Mask) (clearance 0.3) ${p.net.key_out.str})
+        (pad 6 smd rect (at -7.9 -3.7 ${p.rot}) (size 1.6 2.2) (layers F.Cu F.Paste F.Mask) (clearance 0.5) ${p.net.key_out.str})
+        (pad 5 smd rect (at 2.8 -5.9 ${p.rot}) (size 1.6 2.2) (layers F.Cu F.Paste F.Mask) ${p.net.key_in.str})
         (pad "" np_thru_hole circle (at -5 -3.7 ${p.rot + 90}) (size 3 3) (drill 3) (layers *.Cu *.Mask))
         (pad "" np_thru_hole circle (at 5.22 4.2 ${p.rot}) (size 1 1) (drill 1) (layers *.Cu *.Mask))
         (pad "" np_thru_hole circle (at -5.22 4.2 ${p.rot}) (size 1 1) (drill 1) (layers *.Cu *.Mask))
-        (pad 2 smd rect (at 2.75 5.399 ${p.rot}) (size 1.7 1) (layers F.Cu F.Paste F.Mask) ${p.net.dout.str})
+        (pad 2 smd rect (at 2.75 5.399 ${p.rot}) (size 1.7 1) (layers F.Cu F.Paste F.Mask) ${p.net.led_out.str})
         (pad 3 smd rect (at -2.75 5.399 ${p.rot}) (size 1.7 1) (layers F.Cu F.Paste F.Mask) ${p.net.GND.str})
         (pad 1 smd rect (at 2.75 3.999 ${p.rot}) (size 1.7 1) (layers F.Cu F.Paste F.Mask) ${p.net.VCC.str})
-        (pad 4 smd rect (at -2.75 3.999 ${p.rot}) (size 1.7 1) (layers F.Cu F.Paste F.Mask) ${p.net.din.str})
+        (pad 4 smd rect (at -2.75 3.999 ${p.rot}) (size 1.7 1) (layers F.Cu F.Paste F.Mask) ${p.net.led_in.str})
         (pad 3 smd rect (at -2.75 3.999 ${p.rot}) (size 1.7 1) (layers B.Cu B.Paste B.Mask) ${p.net.GND.str})
-        (pad 2 smd rect (at 2.75 3.999 ${p.rot}) (size 1.7 1) (layers B.Cu B.Paste B.Mask) ${p.net.dout.str})
-        (pad 4 smd rect (at -2.75 5.399 ${p.rot}) (size 1.7 1) (layers B.Cu B.Paste B.Mask) ${p.net.din.str})
+        (pad 2 smd rect (at 2.75 3.999 ${p.rot}) (size 1.7 1) (layers B.Cu B.Paste B.Mask) ${p.net.led_out.str})
+        (pad 4 smd rect (at -2.75 5.399 ${p.rot}) (size 1.7 1) (layers B.Cu B.Paste B.Mask) ${p.net.led_in.str})
         (pad 1 smd rect (at 2.75 5.399 ${p.rot}) (size 1.7 1) (layers B.Cu B.Paste B.Mask) ${p.net.VCC.str})
       )
     `

@@ -5,6 +5,7 @@ module.exports = {
     choc_led: require('./choc_led'),
     chocmini: require('./chocmini'),
     diode: require('./diode'),
+    diode_alt: require('./diode_alt'),
     jstph: require('./jstph'),
     jumper: require('./jumper'),
     mx: require('./mx'),
